@@ -24,3 +24,7 @@ They also don't have the `Invoke` function.
 
 ## Vulnerabilities
 * `gorutine` - If concurrent programs are not handled properly, it is easy to cause a conflict condition problem that results in an non-deterministic execution.
+
+## Requirements
+- Go 1.20
+- Fabric v2.4.9
