@@ -1,4 +1,4 @@
-module github.com/Kiruha01/fabric-samples/gorutine2_chaincode
+module github.com/Kiruha01/test-vulnerable-chaincodes/gorutine/new_style
 
 go 1.20
 
