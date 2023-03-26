@@ -24,6 +24,8 @@ They also don't have the `Invoke` function.
 
 ## Vulnerabilities
 * `gorutine` - If concurrent programs are not handled properly, it is easy to cause a conflict condition problem that results in an non-deterministic execution.
+* `field-declaration` - There should be no field declarations in the chaincode structure. Chaincode needs to implement interfaces Init and Invoke, where fields can be accessed if they are defined in the structure. However, since each peer node does not necessarilyperform every transaction, the field values of the chaincode may be inconsistent among the peer nodes.
+
 
 ## Requirements
 - Go 1.20
