@@ -8,11 +8,13 @@ import (
 
 type MyChaincode struct {
     Counter int
+    newVar int
 }
 
 func (t *MyChaincode) Init(stub shim.ChaincodeStubInterface) pb.Response {
     fmt.Println("MyChaincode Init")
     t.Counter = 0
+    t.newVar = 2
     return shim.Success(nil)
 }
 

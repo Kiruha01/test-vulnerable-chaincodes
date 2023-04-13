@@ -5,9 +5,12 @@ import (
     "github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
+
+
 type MyChaincode struct {
     contractapi.Contract
     Counter int
+    newVar int
 }
 
 func (t *MyChaincode) Init(ctx contractapi.TransactionContextInterface) error {
@@ -23,6 +26,7 @@ func (t *MyChaincode) Hello(ctx contractapi.TransactionContextInterface) error {
 
 func (t *MyChaincode) IncrementCounter(ctx contractapi.TransactionContextInterface) error {
     t.Counter++ // Vulnerable code: direct access to public field
+    t.newVar--
     return nil
 }
 
